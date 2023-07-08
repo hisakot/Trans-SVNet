@@ -1,0 +1,19 @@
+適宜out_featuresやnetwork内の次元変更
+
+python train_embedding.py -t 50 -v 50 --in_ch 6 -f 9 -c 9
+>> best_model/emd_lr10e-5/~.pth
+
+common.py 書き換え
+
+python generate_LFB.py -t 50 -v 50 --LFB_l 30 --in_ch 6 -f 9 -c 9
+>> LFB/g_LFB50*.pkl
+
+common.py 書き換え
+
+python tecno.py > out.txt
+>> best_model/TeCNO/~.pth
+
+common.py 書き換え
+
+python trans_SV.py > out.txt
+
